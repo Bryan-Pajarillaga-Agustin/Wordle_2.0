@@ -1,4 +1,4 @@
-const { timeLog } = require("console")
+
 
 let row1, row2, row3, row4, row5
 let restrictions = ['a','b','c','d','e','f','g','h','i','j','k','l',
