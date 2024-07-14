@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <div class="gold-icon"></div> <label for="gold-icon" id="gold-text">0 gold</label>
+        <button id="hintButton" onclick="Hint()">Take A Hint</button>
+    </div>
+    <h1 id="Score">Score: 0</h1>
+
+    <div class="main-container">
+        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #34342e; text-decoration: underline; text-align: center;">WORDLE</h1>
+        <button class="startButton" onclick="GameStart()">Start</button>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <button type="submit" id="Submit-Button" onclick="SubmitButton()">Submit</button>
+    </div>
+
+    <div class="KeyBoard-Container">
+        <ul class="rowKeyboard">
+            <li class="keys" onclick="KeyboardKeys('q')">q</li>
+            <li class="keys" onclick="KeyboardKeys('w')">w</li>
+            <li class="keys" onclick="KeyboardKeys('e')">e</li>
+            <li class="keys" onclick="KeyboardKeys('r')">r</li>
+            <li class="keys" onclick="KeyboardKeys('t')">t</li>
+            <li class="keys" onclick="KeyboardKeys('y')">y</li>
+            <li class="keys" onclick="KeyboardKeys('u')">u</li>
+            <li class="keys" onclick="KeyboardKeys('i')">i</li>
+            <li class="keys" onclick="KeyboardKeys('o')">o</li>
+            <li class="keys" onclick="KeyboardKeys('p')">p</li>
+            <li class="keys Backspace" onclick="KeyboardKeys('Backspace')">BackSpace</li>
+        </ul>            
+        <ul class="rowKeyboard">
+            <li class="keys" onclick="KeyboardKeys('a')">a</li>
+            <li class="keys" onclick="KeyboardKeys('s')">s</li>
+            <li class="keys" onclick="KeyboardKeys('d')">d</li>
+            <li class="keys" onclick="KeyboardKeys('f')">f</li>
+            <li class="keys" onclick="KeyboardKeys('g')">g</li>
+            <li class="keys" onclick="KeyboardKeys('h')">h</li>
+            <li class="keys" onclick="KeyboardKeys('j')">j</li>
+            <li class="keys" onclick="KeyboardKeys('k')">k</li>
+            <li class="keys" onclick="KeyboardKeys('l')">l</li>
+            <li class="keys Enter" onclick="SubmitButton()">Enter</li>
+        </ul>
+        <ul class="rowKeyboard">
+            <li class="keys" onclick="KeyboardKeys('z')">z</li>
+            <li class="keys" onclick="KeyboardKeys('x')">x</li>
+            <li class="keys" onclick="KeyboardKeys('c')">c</li>
+            <li class="keys" onclick="KeyboardKeys('v')">v</li>
+            <li class="keys" onclick="KeyboardKeys('b')">b</li>
+            <li class="keys" onclick="KeyboardKeys('n')">n</li>
+            <li class="keys" onclick="KeyboardKeys('m')">m</li>
+        </ul>
+    </div>
+
+    <div id="hint-box">
+        <h2 id="hint-alert">Will You Take A Hint?
+            It Will Cost  <div class="gold-icon" id="gold-icon" ></div> 20 gold.
+        </h2>
+
+        <div class="yes-no">
+            <button id="yes" onclick="hintOption(1)">Yes</button>
+            <button id="no" onclick="hintOption(0)">No</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>
