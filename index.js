@@ -671,7 +671,7 @@ function gameOver(){
             document.getElementsByClassName("startButton")[0].style.display = "block"
             document.getElementById("Score").textContent = "Score: 0"
             alert("You Lose! The Word is: " + word)
-            for(let i = 0; i < 27; i++){
+            for(let i = 0; i < 28; i++){
                 if(i < 25){
                     tiles[i].textContent = ""
                     tiles[i].style.backgroundColor = "#deded6d2"
