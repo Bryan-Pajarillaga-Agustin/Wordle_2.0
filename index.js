@@ -188,7 +188,7 @@ function KeyboardKeys(key){
                 if(row1 < 4){
                     row1++;
                     if(tiles[row1].style.backgroundColor != "green"){
-                        tiles[row1].textContent = e.key.toUpperCase()
+                        tiles[row1].textContent = key.toUpperCase()
                         tiles[row1].classList.add("AnInput")
                     }
                 }
@@ -211,7 +211,7 @@ function KeyboardKeys(key){
                 if(row2 < 9){
                     row2++;
                     if(tiles[row2].style.backgroundColor != "green"){
-                        tiles[row2].textContent = e.key.toUpperCase()
+                        tiles[row2].textContent = key.toUpperCase()
                         tiles[row2].classList.add("AnInput")
                     }
                 }
@@ -234,7 +234,7 @@ function KeyboardKeys(key){
                 if(row3 < 14){
                     row3++;
                     if(tiles[row3].style.backgroundColor != "green"){
-                        tiles[row3].textContent = e.key.toUpperCase()
+                        tiles[row3].textContent = key.toUpperCase()
                         tiles[row3].classList.add("AnInput")
                     }
                 }
@@ -257,7 +257,7 @@ function KeyboardKeys(key){
                 if(row4 < 19){
                     row4++;
                     if(tiles[row4].style.backgroundColor != "green"){
-                        tiles[row4].textContent = e.key.toUpperCase()
+                        tiles[row4].textContent = key.toUpperCase()
                         tiles[row4].classList.add("AnInput")
                     }
                 }
@@ -279,8 +279,9 @@ function KeyboardKeys(key){
             if(!tileComplete){
                 if(row5 < 24){
                     row5++;
+                    
                     if(tiles[row5].style.backgroundColor != "green"){
-                        tiles[row5].textContent = e.key.toUpperCase()
+                        tiles[row5].textContent = key.toUpperCase()
                         tiles[row5].classList.add("AnInput")
                     }
                 }
