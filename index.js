@@ -645,7 +645,7 @@ function NextWord(){
     }
     newIndexes.splice(0,1)
     for(let i = 0; i < 27 ; i++){
-        if(i < 25){
+        if(i < 27){
             tiles[i].textContent = ""
             tiles[i].style.backgroundColor = "#deded6d2"
             if(tiles[i].classList.contains("turnGreen")){
