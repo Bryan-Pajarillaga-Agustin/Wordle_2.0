@@ -1,3 +1,4 @@
+const { timeLog } = require("console")
 
 let row1, row2, row3, row4, row5
 let restrictions = ['a','b','c','d','e','f','g','h','i','j','k','l',
@@ -173,7 +174,9 @@ function KeyboardKeys(key){
     if(row == 1){
         if(key === "Backspace" && row1 >= -1){
             if(row1 != -1){
-                tiles[row1].textContent = ""
+                if(tiles[row1].style.backgroundColor != "green"){
+                    tiles[row1].textContent = ""
+                }
                 if(tiles[row1].classList.contains("AnInput")){
                     tiles[row1].classList.remove("AnInput")
                 }
@@ -184,8 +187,10 @@ function KeyboardKeys(key){
             if(!tileComplete){
                 if(row1 < 4){
                     row1++;
-                    tiles[row1].textContent = key.toUpperCase()
-                    tiles[row1].classList.add("AnInput")
+                    if(tiles[row1].style.backgroundColor != "green"){
+                        tiles[row1].textContent = e.key.toUpperCase()
+                        tiles[row1].classList.add("AnInput")
+                    }
                 }
             }
         }
@@ -195,7 +200,9 @@ function KeyboardKeys(key){
                 if(tiles[row2].classList.contains("AnInput")){
                     tiles[row2].classList.remove("AnInput")
                 }
-                tiles[row2].textContent = ""
+                if(tiles[row2].style.backgroundColor != "green"){
+                    tiles[row2].textContent = ""
+                }
                 row2--
             }
             tileComplete = false
@@ -203,8 +210,10 @@ function KeyboardKeys(key){
             if(!tileComplete){
                 if(row2 < 9){
                     row2++;
-                    tiles[row2].textContent = key.toUpperCase()
-                    tiles[row2].classList.add("AnInput")
+                    if(tiles[row2].style.backgroundColor != "green"){
+                        tiles[row2].textContent = e.key.toUpperCase()
+                        tiles[row2].classList.add("AnInput")
+                    }
                 }
             }
         }
@@ -214,7 +223,9 @@ function KeyboardKeys(key){
                 if(tiles[row3].classList.contains("AnInput")){
                     tiles[row3].classList.remove("AnInput")
                 }
-                tiles[row3].textContent = ""
+                if(tiles[row3].style.backgroundColor != "green"){
+                    tiles[row3].textContent = ""
+                }
                 row3--
             }
             tileComplete = false
@@ -222,8 +233,10 @@ function KeyboardKeys(key){
             if(!tileComplete){
                 if(row3 < 14){
                     row3++;
-                    tiles[row3].textContent = key.toUpperCase()
-                    tiles[row3].classList.add("AnInput")
+                    if(tiles[row3].style.backgroundColor != "green"){
+                        tiles[row3].textContent = e.key.toUpperCase()
+                        tiles[row3].classList.add("AnInput")
+                    }
                 }
             }
         }
@@ -233,7 +246,9 @@ function KeyboardKeys(key){
                 if(tiles[row4].classList.contains("AnInput")){
                     tiles[row4].classList.remove("AnInput")
                 }
-                tiles[row4].textContent = ""
+                if(tiles[row4].style.backgroundColor != "green"){
+                    tiles[row4].textContent = ""
+                }
                 row4--
             }
             tileComplete = false
@@ -241,8 +256,10 @@ function KeyboardKeys(key){
             if(!tileComplete){
                 if(row4 < 19){
                     row4++;
-                    tiles[row4].textContent = key.toUpperCase()
-                    tiles[row4].classList.add("AnInput")
+                    if(tiles[row4].style.backgroundColor != "green"){
+                        tiles[row4].textContent = e.key.toUpperCase()
+                        tiles[row4].classList.add("AnInput")
+                    }
                 }
             }
         }
@@ -252,7 +269,9 @@ function KeyboardKeys(key){
                 if(tiles[row5].classList.contains("AnInput")){
                     tiles[row5].classList.remove("AnInput")
                 }
-                tiles[row5].textContent = ""
+                if(tiles[row5].style.backgroundColor != "green"){
+                    tiles[row5].textContent = ""
+                }
                 row5--
             }
             tileComplete = false
@@ -260,8 +279,11 @@ function KeyboardKeys(key){
             if(!tileComplete){
                 if(row5 < 24){
                     row5++;
-                    tiles[row5].textContent = key.toUpperCase()
-                    tiles[row5].classList.add("AnInput")
+                    }
+                    if(tiles[row5].style.backgroundColor != "green"){
+                        tiles[row5].textContent = e.key.toUpperCase()
+                        tiles[row5].classList.add("AnInput")
+                    }
                 }
             }
         }
@@ -279,11 +301,6 @@ window.addEventListener('keyup', (e) => {
                             }
                             if(tiles[row1].classList.contains("AnInput")){
                                 tiles[row1].classList.remove("AnInput")
-                            }
-                            for(let k = 0; k < 5; k++){
-                                if(tiles[row1].textContent.length != 1){
-                                    row1--
-                                } else {}
                             }
                         }
                         tileComplete = false
