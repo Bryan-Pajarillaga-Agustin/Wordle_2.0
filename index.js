@@ -302,6 +302,7 @@ window.addEventListener('keyup', (e) => {
                             if(tiles[row1].classList.contains("AnInput")){
                                 tiles[row1].classList.remove("AnInput")
                             }
+                            row1--
                         }
                         tileComplete = false
                     } else {
