@@ -279,7 +279,6 @@ function KeyboardKeys(key){
             if(!tileComplete){
                 if(row5 < 24){
                     row5++;
-                    }
                     if(tiles[row5].style.backgroundColor != "green"){
                         tiles[row5].textContent = e.key.toUpperCase()
                         tiles[row5].classList.add("AnInput")
