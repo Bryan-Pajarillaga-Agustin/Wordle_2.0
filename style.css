@@ -197,7 +197,8 @@ li:active, button:active{
 }
 .heading{
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     align-items: center;
 }
 #gold-text{
