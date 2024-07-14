@@ -1,5 +1,3 @@
-
-
 let row1, row2, row3, row4, row5
 let restrictions = ['a','b','c','d','e','f','g','h','i','j','k','l',
                     'm','n','o','p','q','r','s','t','u','v','w','x','y','z', 'Backspace']
@@ -644,20 +642,20 @@ function NextWord(){
         randomIndex.splice(random, 1)
     }
     newIndexes.splice(0,1)
-    for(let i = 0; i < 27 ; i++){
-        if(i < 27){
-            tiles[i].textContent = ""
-            tiles[i].style.backgroundColor = "#deded6d2"
-            if(tiles[i].classList.contains("turnGreen")){
-                tiles[i].classList.remove("turnGreen")
+    for(let q = 0; q < 28 ; q++){
+        if(q < 25){
+            tiles[q].textContent = ""
+            tiles[q].style.backgroundColor = "#deded6d2"
+            if(tiles[q].classList.contains("turnGreen")){
+                tiles[q].classList.remove("turnGreen")
             } 
-            else if(tiles[i].classList.contains("turnYellow")){
-                tiles[i].classList.remove("turnYellow")
-            } else if(tiles[i].classList.contains("turnGrey")){
-                tiles[i].classList.remove("turnGrey")
+            else if(tiles[q].classList.contains("turnYellow")){
+                tiles[q].classList.remove("turnYellow")
+            } else if(tiles[q].classList.contains("turnGrey")){
+                tiles[q].classList.remove("turnGrey")
             } else { console.log("") }
         }
-        keyboardKeys[i].style.backgroundColor = "#baa8a8"
+        keyboardKeys[q].style.backgroundColor = "#baa8a8"
     }
 }
 
