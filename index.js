@@ -580,7 +580,7 @@ function SubmitButton(){
 function KeyBoardColor(){
     r = renewR
     while(r != maximum){
-        for(let l = 0; l < restrictions.length; l++){
+        for(let l = 0; l < restrictions.length + 1; l++){
             if(tiles[r].style.backgroundColor == "green"){
                 if(tiles[r].textContent.toLowerCase() == keyboardKeys[l].textContent){
                     keyboardKeys[l].style.backgroundColor = "green"
